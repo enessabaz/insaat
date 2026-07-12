@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projelerimiz | Fırat İnşaat</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#fff5f7;
+}
+
+.navbar{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1000px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 40px;
+
+    background:rgba(15, 23, 42, 0.45);
+    backdrop-filter:blur(12px) saturate(180%);
+    -webkit-backdrop-filter:blur(12px) saturate(180%);
+
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+    z-index:1000;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+    width:35%;
+}
+
+.nav-links.left{
+    justify-content:flex-start;
+}
+
+.nav-links.right{
+    justify-content:flex-end;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:500;
+    transition:0.3s;
+    text-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+.nav-links a:hover{
+    color:#00d4ff;
+}
+
+.logo{
+    font-size:2.2rem;
+    font-weight:800;
+    letter-spacing:3px;
+    color:#fff;
+}
+
+.hero{
+    height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#26150d;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.section{
+    padding:100px 10%;
+}
+
+.project{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    margin-bottom:100px;
+}
+
+.project.reverse{
+    flex-direction:row-reverse;
+}
+
+.project img{
+    width:50%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    object-fit:cover;
+}
+
+.project-text{
+    width:50%;
+}
+
+.project-text span{
+    color:#00a86b;
+    font-weight:600;
+}
+
+.project-text h2{
+    font-size:2.2rem;
+    margin:10px 0;
+}
+
+.project-text p{
+    line-height:1.8;
+    color:#444;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#1C3026;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00a86b;
+}
+
+.footer{
+    background:#1c1c1c;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
+
+/* Masaüstünde mobil menüyü gizle */
+.mobile-bottom-nav {
+    display: none;
+}
+
+/* MOBİL */
+@media(max-width:768px){
+
+    .project,
+    .project.reverse{
+        flex-direction:column;
+    }
+
+    .project img,
+    .project-text{
+        width:100%;
+    }
+
+    .nav-links{
+        display:none;
+    }
+    
+    .logo{
+        margin:auto;
+    }
+
+    /* Mobil alt menü alanına yer açmak için footera ekstra padding */
+    .footer {
+        padding-bottom: 90px;
+    }
+
+    /* MOBİL ALT MENÜ STİLLERİ */
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        justify-content: space-around;
+        align-items: center;
+        padding: 12px 0;
+        z-index: 1000;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+    }
+
+    .mobile-bottom-nav a {
+        color: #d1d5db;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        transition: 0.3s;
+    }
+
+    .mobile-bottom-nav a span {
+        font-size: 1.3rem; 
+    }
+
+    .mobile-bottom-nav a:hover,
+    .mobile-bottom-nav a:active {
+        color: #00d4ff;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <ul class="nav-links left">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+    </ul>
+
+    <div class="logo">Fırat İnşaat</div>
+
+    <ul class="nav-links right">
+        <li><a href="projeler.html">Projelerimiz</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero">
+    <h1>PROJELERİMİZ</h1>
+</section>
+
+<section class="section">
+
+<div class="project">
+    <img src="proje1.jpg">
+    <div class="project-text">
+        <span>Konut</span>
+        <h2>njafjnsoadfa</h2>
+        <p>anfjdsfakjsfnjakljfsddjkls.</p>
+        <a href="proje1.html" class="btn">Detay Gör</a>
+    </div>
+</div>
+
+<div class="project reverse">
+    <img src="proje2.jpg">
+    <div class="project-text">
+        <span>Konut2</span>
+        <h2>asfmla;mfalfdasf</h2>
+        <p>nalfgnaglagnasl</p>
+        <a href="proje2.html" class="btn">Detay Gör</a>
+    </div>
+</div>
+
+<div class="project">
+    <img src="proje3.jpg">
+    <div class="project-text">
+        <span>Konut3</span>
+        <h2>ldfksangklfasnglasdglas</h2>
+        <p>bdafskgbaksfgkagbaskfkg</p>
+        <a href="proje3.html" class="btn">Detay Gör</a>
+    </div>
+</div>
+
+</section>
+
+<footer class="footer">
+    © 2026 Fırat İnşaat | Tüm Hakları Saklıdır.
+</footer>
+
+<!-- MOBİL ALT MENÜ EKLENTİSİ -->
+<nav class="mobile-bottom-nav">
+    <a href="index.html"><span>🏠</span>Ana Sayfa</a>
+    <a href="hakkimizda.html"><span>🏢</span>Hakkımızda</a>
+    <a href="projeler.html"><span>🏗️</span>Projeler</a>
+    <a href="iletisim.html"><span>📞</span>İletişim</a>
+</nav>
+
+</body>
+</html>
